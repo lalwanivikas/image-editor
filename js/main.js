@@ -1,16 +1,19 @@
 
-// $("#imageContainer").append("<img/>");
+// adding in image via url box
+function addImage(e) {
+	var imgUrl = $("#imgUrl").val();
+	if (imgUrl.length) {
+		$("#imageContainer img").attr("src", imgUrl);
+	}
+	e.preventDefault();	
+}
 
-// function addImage() {
-// 	var imgUrl = $("#imgUrl").val();
-// 	$("#imageContainer img").attr("src", imgUrl);
-// }
+$("#go").click(addImage); //on click of go
 
-// $("#go").click(addImage);
+$("#urlBox").submit(addImage);
 
-$("#imageContainer").append("<img/>");
-$("#imageContainer img").attr("src", "image/pup.jpg");
 
+// editing image via css properties
 function editImage() {
 	var gs = $("#gs").val(); // grayscale
 	var blur = $("#blur").val(); // blur
@@ -37,9 +40,12 @@ function editImage() {
 //When sliders change
 $("input[type=range]").change(editImage).mousemove(editImage);
 
-
-
-
+// Reset sliders back to their original values
+$('#imageEditor').on('reset', function () {
+	setTimeout(function() {
+		editImage();
+	},0);
+});
 
 
 

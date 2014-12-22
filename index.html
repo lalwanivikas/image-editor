@@ -8,63 +8,67 @@
 	<body>
 		<h1>Image Editor</h1>
 		
-		<form class = "center">
+		<form id="urlBox" class = "center">
 			<input class="url-box" type="url" id="imgUrl" placeholder="Paste any image link and start playing.">
-			<input id="go" type="submit" class="submit" value="Go">
+			<input id="go" type="button" value="Go">
 		</form>
 
 		<hr width="100%" color="grey">
 
 		<div class="sliders">
-			<p>
-				<label for="gs">Grayscale</label>
-				<input id="gs" name="gs" type="range" min=0 max=100 value=0>
-			</p>
+			<form id="imageEditor">
+				<p>
+					<label for="gs">Grayscale</label>
+					<input id="gs" name="gs" type="range" min=0 max=100 value=0>
+				</p>
 
-			<p>
-				<label for="blur">Blur</label>
-				<input id="blur" name="blur" type="range" min=0 max=10 value=0>
-			</p>
+				<p>
+					<label for="blur">Blur</label>
+					<input id="blur" name="blur" type="range" min=0 max=10 value=0>
+				</p>
 
-			<p>
-				<label for="br">Brightness</label>
-				<input id="br" name="br" type="range" min=0 max=200 value=100>
-			</p>
+				<p>
+					<label for="br">Exposure</label>
+					<input id="br" name="br" type="range" min=0 max=200 value=100>
+				</p>
 
-			<p>
-				<label for="ct">Contrast</label>
-				<input id="ct" name="ct" type="range" min=0 max=200 value=100>
-			</p>
+				<p>
+					<label for="ct">Contrast</label>
+					<input id="ct" name="ct" type="range" min=0 max=200 value=100>
+				</p>
 
-			<p>
-				<label for="huer">Hue Rotate</label>
-				<input id="huer" name="huer" type="range" min=0 max=360 value=0>
-			</p>
+				<p>
+					<label for="huer">Hue Rotate</label>
+					<input id="huer" name="huer" type="range" min=0 max=360 value=0>
+				</p>
 
-			<p>
-				<label for="opacity">Opacity</label>
-				<input id="opacity" name="opacity" type="range" min=0 max=100 value=100>
-			</p>
+				<p>
+					<label for="opacity">Opacity</label>
+					<input id="opacity" name="opacity" type="range" min=0 max=100 value=100>
+				</p>
 
-			<p>
-				<label for="invert">Invert</label>
-				<input id="invert" name="invert" type="range" min=0 max=100 value=0>
-			</p>
+				<p>
+					<label for="invert">Invert</label>
+					<input id="invert" name="invert" type="range" min=0 max=100 value=0>
+				</p>
 
-			<p>
-				<label for="saturate">Saturate</label>
-				<input id="saturate" name="saturate" type="range" min=0 max=500 value=100>
-			</p>
+				<p>
+					<label for="saturate">Saturate</label>
+					<input id="saturate" name="saturate" type="range" min=0 max=500 value=100>
+				</p>
 
-			<p>
-				<label for="sepia">Sepia</label>
-				<input id="sepia" name="sepia" type="range" min=0 max=100 value=0>
-			</p>
+				<p>
+					<label for="sepia">Sepia</label>
+					<input id="sepia" name="sepia" type="range" min=0 max=100 value=0>
+				</p>
 
+				<input type="reset" form="imageEditor" id="reset" value="Reset" />
+
+			</form>
 		</div>	
 
 		<div id="imageContainer" class="center">
-
+			<img src="image/puppy.jpg"/>
 		</div>
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
