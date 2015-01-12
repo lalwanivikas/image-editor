@@ -8,7 +8,8 @@
 body {
 	background-color: #D2D7D3;
 	font-family: monospace;
-	max-width: 960px;
+	width: 960px;
+    max-width: 960px;
 	margin: 0 auto;
 }
 
@@ -69,10 +70,10 @@ form {
 	border: 2px solid grey;
 	border-radius: 10px;
 	padding: 5px;
-	width: 60%;
+	width: 65%;
 	max-width: 600px;
 	float: left;
-	margin: 25px;
+	margin: 20px;
 }
 
 #imageContainer img {
@@ -86,7 +87,8 @@ form {
 	float: left;
 	border: 2px solid grey;
 	border-radius: 10px;
-	margin-top: 25px;
+	margin-top: 20px;
+    margin-bottom: 20px;
 	padding-left: 10px;
 }
 

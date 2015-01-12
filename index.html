@@ -8,6 +8,7 @@
 	<body>
 		<h1>Image Editor</h1>
 		
+		<!--Form for collecting image URL -->
 		<form id="urlBox" class = "center">
 			<input class="url-box" type="url" id="imgUrl" placeholder="Paste any image link and start playing.">
 			<input id="go" type="button" value="Go">
@@ -15,6 +16,7 @@
 
 		<hr width="100%" color="grey">
 
+		<!--Controls for CSS filters via range input-->
 		<div class="sliders">
 			<form id="imageEditor">
 				<p>
@@ -67,8 +69,9 @@
 			</form>
 		</div>	
 
+		<!--container where image will be loaded-->
 		<div id="imageContainer" class="center">
-			<img src="image/puppy.jpg"/>
+			<img src="image/stadium.jpg"/>
 		</div>
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>

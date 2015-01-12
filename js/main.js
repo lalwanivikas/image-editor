@@ -1,5 +1,5 @@
 
-// adding in image via url box
+// adding an image via url box
 function addImage(e) {
 	var imgUrl = $("#imgUrl").val();
 	if (imgUrl.length) {
@@ -8,8 +8,10 @@ function addImage(e) {
 	e.preventDefault();	
 }
 
-$("#go").click(addImage); //on click of go
+//on click of go(submit) button, addImage() will be called
+$("#go").click(addImage);
 
+//on pressing return, addImage() will be called
 $("#urlBox").submit(addImage);
 
 
@@ -37,10 +39,10 @@ function editImage() {
 
 }
 
-//When sliders change
+//When sliders change image will be updated via editImage() function
 $("input[type=range]").change(editImage).mousemove(editImage);
 
-// Reset sliders back to their original values
+// Reset sliders back to their original values on press of 'reset'
 $('#imageEditor').on('reset', function () {
 	setTimeout(function() {
 		editImage();
