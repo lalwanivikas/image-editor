@@ -27,6 +27,16 @@ function editImage() {
 	var saturate = $("#saturate").val(); //saturate
 	var sepia = $("#sepia").val(); //sepia
 
+	$("#imageContainer img").css("filter", 'grayscale(' + gs+
+													 '%) blur(' + blur +
+													 'px) brightness(' + br +
+													 '%) contrast(' + ct +
+													 '%) hue-rotate(' + huer +
+													 'deg) opacity(' + opacity +
+													 '%) invert(' + invert +
+													 '%) saturate(' + saturate +
+													 '%) sepia(' + sepia + '%)');
+
 	$("#imageContainer img").css("-webkit-filter", 'grayscale(' + gs+
 													 '%) blur(' + blur +
 													 'px) brightness(' + br +
@@ -48,7 +58,3 @@ $('#imageEditor').on('reset', function () {
 		editImage();
 	},0);
 });
-
-
-
-
