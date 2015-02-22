@@ -5,11 +5,8 @@ function addImage(e) {
 	if (imgUrl.length) {
 		$("#imageContainer img").attr("src", imgUrl);
 	}
-	e.preventDefault();	
+	e.preventDefault();
 }
-
-//on click of go(submit) button, addImage() will be called
-$("#go").click(addImage);
 
 //on pressing return, addImage() will be called
 $("#urlBox").submit(addImage);
