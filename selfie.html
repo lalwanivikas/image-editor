@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Image Editor | Vikas Lalwani</title>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link href = "css/main.css" type="text/css" rel="stylesheet">
+  </head>
+
+  <body>
+    <video id="video" width="640" height="480" autoplay></video>
+    <button id="snap">Snap Photo</button>
+    <button id="start">Start Video</button>
+    <button id="stop">Stop Video</button>
+    <canvas id="canvas" width="640" height="480"></canvas>
+    <script src="js/selfie.js"></script>
+    <img id="converted-image"/>
+    <form name="myform" action="index.php" method="post">
+      <input id="value" name="value" type="hidden" />
+      <button id="filter">Filter</button></form>
+  </body>
+</html>

@@ -15,7 +15,7 @@
 			<form id="urlBox" class = "center">
 				<input class="url-box" type="url" id="imgUrl" placeholder="Paste any image link and hit enter to start playing.">
 			</form>
-
+			<a href="selfie.html" target="_self" class="selfie-link">Take a selfie</a>
 			<!--Controls for CSS filters via range input-->
 			<div class="sliders">
 				<form id="imageEditor">
@@ -71,7 +71,13 @@
 
 			<!--container where image will be loaded-->
 			<div id="imageContainer" class="center">
-				<img src="image/puppies.jpg"/>
+				<img src=<?php 
+					if (isset($_POST["value"]) && !empty($_POST["value"])) {
+    				echo "\"".$_POST['value']."\"";
+    			} else{  
+    				echo "image/puppies.jpg";
+					}
+				?> />
 			</div>
 		</div>
 
